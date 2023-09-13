@@ -6,6 +6,7 @@ import { CiDiscount1 } from "react-icons/ci";
 import { IoHelpBuoyOutline } from "react-icons/io5";
 import { AiOutlineUser } from "react-icons/ai";
 import { HiOutlineShoppingBag } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -13,7 +14,8 @@ function Header() {
       <div className="inner-nav">
         <div className="left-nav">
           <div className="logo-div">
-            <img src={LOGO_URL} alt="" />
+            <Link to={"/"}>  <img src={LOGO_URL} alt="" />  </Link>
+           
           </div>
           <div className="addresh-div">
             <span>Other</span>
@@ -30,19 +32,23 @@ function Header() {
           </div>
           <div className="search">
             {" "}
-            <CiDiscount1 /> <span>Offers</span>
+            <Link to={"/offers"}>   <CiDiscount1 /> <span>Offers</span> </Link>
+           
           </div>
           <div className="search">
             {" "}
-            <IoHelpBuoyOutline /> <span>Help</span>
+            <Link to={"/help"}>   <IoHelpBuoyOutline /> <span>Help</span> </Link>
+          
           </div>
           <div className="search">
             {" "}
-            <AiOutlineUser /> <span>Sign in</span>
+            <Link to={"/signin"}> <AiOutlineUser /> <span>Sign in</span>  </Link>
+            
           </div>
           <div className="search">
             {" "}
-            <HiOutlineShoppingBag /> <span>Cart</span>
+            <Link to={"/cart"}>   <HiOutlineShoppingBag /> <span>Cart</span> </Link>
+           
           </div>
         </div>
       </div>
