@@ -1,0 +1,1 @@
+export const LOGO_URL = "https://cdn.worldvectorlogo.com/logos/swiggy-1.svg";
