@@ -2,13 +2,21 @@
   margin: 0;
   padding: 0;
 }
-
 .nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  background-color: snow;
+  box-shadow: 0 15px 40px -20px rgba(40, 44, 63, 0.15);
+}
+.inner-nav {
   display: flex;
   justify-content: space-between;
   padding: 5px 10%;
-  box-shadow: 0 15px 40px -20px rgba(40,44,63,.15);
   color: #282c3f;
+  position: relative;
 }
 .left-nav {
   display: flex;
@@ -72,53 +80,60 @@
     padding: 0px;
     border: 1px solid red;
   }
-.logo-div {
-  width: 13px;
-  height: 40px;
-  margin: 0px 0px;
-  padding: 0px;
+  .logo-div {
+    width: 13px;
+    height: 40px;
+    margin: 0px 0px;
+    padding: 0px;
+  }
+  .left-nav div {
+    margin: 0px;
+    margin-left: 3px;
+  }
+  .logo-div img {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+  }
+  .down-arrow {
+    color: rgb(255, 166, 0);
+    font-size: 8px;
+    margin: 2px;
+  }
+  .addresh-div span {
+    margin: 0px;
+    padding: 0px;
+    font-size: 8px;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+  .addresh-div p {
+    margin: 2px;
+    font-size: 5px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    opacity: 0.8;
+  }
+  .right-nav {
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+    margin-right: 5px;
+  }
+  .right-nav div {
+    cursor: pointer;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
-.left-nav div {
-  margin: 0px;
-  margin-left: 3px;
-}
-.logo-div img {
-  width: 100%;
-  height: 100%;
-  margin: 0px;
-  padding: 0px;
-}
-.down-arrow {
-  color: rgb(255, 166, 0);
-  font-size: 8px;
-  margin: 2px;
-}
-.addresh-div span {
-  margin: 0px;
-  padding: 0px;
-  font-size: 8px;
-  font-weight: 600;
-  text-decoration: underline;
-}
-.addresh-div p {
-  margin: 2px;
-  font-size: 5px;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  opacity: 0.8;
-}
-.right-nav {
-  display: flex;
-  align-items: center;
-  font-size: 10px;
-  margin-right: 5px;
-}
-.right-nav div {
-  cursor: pointer;
-  margin: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
+.body {
+  position: relative;
+  height: 100vh;
+  border: 2px solid red;
+  top: 125px;
 }
