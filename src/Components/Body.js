@@ -2,8 +2,7 @@ import React from "react";
 import { FIRST_CAROUSAL, SECONT_CAROUSAL } from "../Utils/Constance";
 import WhatInMind from "./WhatInMind";
 import TopRestroChain from "./TopRestroChain";
-
-
+import OnlineDelivery from "./OnlineDelivery";
 
 function Body() {
   return (
@@ -15,9 +14,10 @@ function Body() {
           <img src={SECONT_CAROUSAL} alt="Bambai Meri Jaan" />
         </div>
       </div>
-      <WhatInMind/>
+      <WhatInMind />
       <div className="hr"></div>
-      <TopRestroChain/>
+      <TopRestroChain />
+      <OnlineDelivery/>
     </div>
   );
 }
