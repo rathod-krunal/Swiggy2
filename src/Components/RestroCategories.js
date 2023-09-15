@@ -18,7 +18,6 @@ const RestroCategories = () => {
     costForTwo,
   } = resInfo?.data?.cards[0]?.card?.card?.info;
    const {offers} = resInfo?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle;
-  //  const {headers,couponCode,description} = offers;
 
   return (
     <div className="restroCategoriesmain">
