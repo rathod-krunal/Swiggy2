@@ -3,6 +3,7 @@ import { FIRST_CAROUSAL, SECONT_CAROUSAL } from "../Utils/Constance";
 import WhatInMind from "./WhatInMind";
 import TopRestroChain from "./TopRestroChain";
 import OnlineDelivery from "./OnlineDelivery";
+import Footer from "./Footer";
 
 function Body() {
   return (
@@ -18,6 +19,7 @@ function Body() {
       <div className="hr"></div>
       <TopRestroChain />
       <OnlineDelivery/>
+      <Footer/>
     </div>
   );
 }

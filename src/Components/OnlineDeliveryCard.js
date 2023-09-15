@@ -6,7 +6,7 @@ function OnlineDeliveryCard(props) {
     const { RestroData } = props;
     const { cloudinaryImageId,name,avgRating,cuisines} = RestroData;
     return (
-      <div className="TopRestroChainCard" >
+      <div className="TopRestroChainCard media" >
         <div className="topRestroChainImg">
             <img src= {TOP_RESTRO_CHAIN +cloudinaryImageId }  alt="" />
         </div>
