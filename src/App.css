@@ -281,10 +281,10 @@
   font-size: 13px;
   padding: 3px;
 }
-.restroCategoriesmain {
+/* .restroCategoriesmain {
   top: 150px;
   position: relative;
-}
+} */
 
 @media screen and (max-width: 700px) {
   .topRestroChainMain {
@@ -534,6 +534,16 @@
   top: 100px;
   position: relative;
 }
+.innerSimmerdiv {
+  border-bottom: 2px dashed #d3d3d3;
+  display: flex;
+  width: 50%;
+  margin: auto;
+}
+.innerSimmerDetailsDiv {
+  margin: 10px;
+  width: 80%;
+}
 .restroInnerDiv {
   border-bottom: 2px dashed #d3d3d3;
   display: flex;
@@ -650,12 +660,12 @@
   justify-content: center;
   align-items: center;
 }
-.MenuCarausals{
+.MenuCarausals {
   position: relative;
   top: 80px;
   padding: 10px;
 }
-.RestroMenuCarausalDiv{
+.RestroMenuCarausalDiv {
   width: 50%;
   margin: 20px auto;
   /* text-align: center; */
@@ -663,18 +673,90 @@
   cursor: pointer;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
-.RestroMenuCarausalInnerDiv{
+.RestroMenuCarausalInnerDiv {
   display: flex;
   justify-content: space-between;
   margin: 2px 10px;
 }
-.RestroMenuCarausalInnerDiv span:nth-child(2){
-font-size: 23px;
-font-weight: 600;
+.RestroMenuCarausalInnerDiv span:nth-child(2) {
+  font-size: 23px;
+  font-weight: 600;
 }
-.RestroMenuCarausalInnerSpan{
+.RestroMenuCarausalInnerSpan {
   margin: 5px;
   font-size: 20px;
   font-weight: 600;
   font-style: bold;
+}
+
+@media screen and (max-width: 700px) {
+  .restroInnerDiv {
+    width: 80%;
+  }
+  .restroDetailsdiv {
+    font-size: 15px;
+    margin: 5px 10px;
+  }
+  .restroRatings {
+    margin: 10px;
+    padding: 5px;
+  }
+  .totalRating {
+    font-size: 10px;
+  }
+  .restroPriceDiv {
+    /* border: 1px solid red; */
+    width: 80%;
+  }
+  .offersdiv {
+    width: 80%;
+  }
+  .RestroMenuCarausalDiv {
+    width: 80%;
+  }
+}
+/* .RestroMenuDropDiv {
+  border: 2px solid red;
+} */
+.InnerMenuMainDiv {
+  display: flex;
+  margin: 10px 5px;
+  border-bottom: 1px solid lightgray;
+}
+.InnerMenuDivDetails {
+  margin: 5px;
+  width: 80%;
+  font-weight: 500;
+  padding: 5px;
+}
+.InnerMenuDivDetails p{
+  margin: 5px 3px;
+}
+.InnerMenuDivDetails p:nth-child(3){
+  opacity: 0.5;
+  font-size: 13px;
+  margin: 5px 3px;
+}
+.InnerMenuDivImg {
+  margin: 5px;
+  width: 20%;
+  display: absolute;
+}
+.InnerMenuDivImg button{
+  position: relative;
+  bottom: 40px;
+  cursor: pointer;
+  left: 35px;
+  width: 80px;
+  padding: 5px;
+  color: rgb(67, 181, 67);
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 10%;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  z-index: 5;
+}
+.InnerMenuDivImg img {
+  width: 100%;
+  height: 100%;
 }

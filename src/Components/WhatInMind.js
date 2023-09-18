@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Whats_On_Your_Mind } from "../DataBase/DB";
 import WhatsInMindCard from "./WhatsInMindCard";
+import WhatsInMindSimer from "../SimerUI/WhatsInMindSimer";
 
 function WhatInMind() {
   const [whatsInMind, setWhatsInMind] = useState(null);
@@ -8,8 +9,7 @@ function WhatInMind() {
   useEffect(() => {
     setWhatsInMind(Whats_On_Your_Mind.info);
   }, []);
-
-  if (!whatsInMind?.length) return <h1> Loading </h1>;
+  if (whatsInMind === null) return <h1>Loading</h1>;
 
   return (
     <div className="whatsinmindmain">
@@ -17,7 +17,7 @@ function WhatInMind() {
       <div className="whatinmindmap">
         {" "}
         {whatsInMind.map((list) => {
-          return <WhatsInMindCard key={list.id}  listData={list} />;
+          return <WhatsInMindCard key={list.id} listData={list} />;
         })}{" "}
       </div>
     </div>

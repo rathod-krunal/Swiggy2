@@ -5,12 +5,12 @@ import { AiFillStar } from "react-icons/ai";
 import { BsCurrencyRupee } from "react-icons/bs";
 import { MENU_OFFERS_LOGO } from "../Utils/Constance";
 import RestroMenuCards from "./RestroMenuCards";
+import InnerSimer from "../SimerUI/InnerSimer";
 
 const RestroCategories = () => {
   const { resId } = useParams();
   const resInfo = useRestroMenu(resId);
-  // console.log(resInfo)
-  if (resInfo == null) return <h1>Loading</h1>;
+  if (resInfo == null || !resInfo?.data?.cards?.length > 0) return  <InnerSimer/>;
   const {
     name,
     cuisines,
@@ -26,11 +26,11 @@ const RestroCategories = () => {
     resInfo?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
       (c) => c.card?.card?.["title"]
     );
-  //  console.log(categories)
+    if(categories.length == 0 ) return <h1> Loading</h1>
   return (
     <div className="restroCategoriesmain">
-      <div className="restroInnerDiv">
-        <div className="restroDetailsdiv">
+      <div className="restroInnerDiv innerSimmerdiv">
+        <div className="restroDetailsdiv innerSimmerDetailsDiv">
           <div className="restroName">{name}</div>
           <div className="restroCuisines">{cuisines}</div>
           <div className="restroArea">{areaName}</div>
@@ -52,7 +52,7 @@ const RestroCategories = () => {
       <div className="offersdiv">
         {offers.map((offer) => {
           return (
-            <div className="offers" key={offer.info.header}>
+            <div className="offers" key={offer.info.offerIds}>
               <div className="topOffer">
                 {" "}
                 <img src={MENU_OFFERS_LOGO + offer.info.offerLogo} alt="" />

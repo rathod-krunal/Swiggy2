@@ -1,7 +1,8 @@
 import React from 'react'
+import MenuDrop from './MenuDrop';
 
 function RestroMenuCards(props) {
-    const {RestroMenu} = props
+    const {RestroMenu} = props;
     // console.log(RestroMenu)
     return (
         <div className="RestroMenuCarausalDiv">
@@ -11,8 +12,9 @@ function RestroMenuCards(props) {
             </span>
             <span> v </span>
           </div>
-    
-         {/* { showItems && <ItemList items={data.itemCards} />} */}
+          <div className="RestroMenuDropDiv"> 
+          <MenuDrop items={RestroMenu?.card?.card.itemCards } />
+          </div>
         </div>
       );
 }
@@ -20,3 +22,4 @@ function RestroMenuCards(props) {
 export default RestroMenuCards
 
 // RestroMenu
+//
