@@ -1,8 +1,9 @@
 import React from "react";
 import { INNER_MENU_IMG } from "../Utils/Constance";
+
+
 function MenuDrop({ items }) {
-  if (items == null) return <h2>Loading</h2>;
-  console.log(items)
+  if (items === null) return <h2>Loading</h2>;
   return (
     <div className="itemsDiv">
       {items.map((item, index) => {

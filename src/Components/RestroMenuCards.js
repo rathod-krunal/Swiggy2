@@ -3,7 +3,6 @@ import MenuDrop from './MenuDrop';
 
 function RestroMenuCards(props) {
     const {RestroMenu} = props;
-    // console.log(RestroMenu)
     return (
         <div className="RestroMenuCarausalDiv">
           <div className="RestroMenuCarausalInnerDiv" >

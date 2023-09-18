@@ -24,9 +24,9 @@ const RestroCategories = () => {
 
   const categories =
     resInfo?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
-      (c) => c.card?.card?.["title"]
+      (c) => c.card?.card["title"]
     );
-    if(categories.length == 0 ) return <h1> Loading</h1>
+    if(categories.length === 0 ) return <h1> Loading</h1>
   return (
     <div className="restroCategoriesmain">
       <div className="restroInnerDiv innerSimmerdiv">
@@ -68,12 +68,17 @@ const RestroCategories = () => {
       </div>
       <div className="MenuCarausals">
         {categories.map((categorie) => {
+          if(categorie?.card?.card["@type"] !== "type.googl=eapis.com/swiggy.presentation.food.v2.NestedItemCategory") {
+
           return (
             <RestroMenuCards
               key={categorie?.card?.card?.title}
               RestroMenu={categorie}
             />
           );
+        }
+        return <></>
+
         })}
       </div>
     </div>
