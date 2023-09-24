@@ -7,8 +7,11 @@ import { IoHelpBuoyOutline } from "react-icons/io5";
 import { AiOutlineUser } from "react-icons/ai";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import Cart from "./Cart";
 
 function Header() {
+  const getData = useSelector((state) => state.cartreducer.carts);
   return (
     <div className="nav">
       <div className="inner-nav">
@@ -47,8 +50,7 @@ function Header() {
           </div>
           <div className="search">
             {" "}
-            <Link to={"/cart"}>   <HiOutlineShoppingBag /> <span>Cart</span> </Link>
-           
+            <Link to={"/cart"}> <span style={{position:"absolute", top: "10px", zIndex:"5", background:'transparent', marginLeft:"10px"}} > {getData.length} </span>   <HiOutlineShoppingBag /> <span>Cart</span> </Link>
           </div>
         </div>
       </div>

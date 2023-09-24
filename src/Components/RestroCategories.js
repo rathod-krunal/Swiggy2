@@ -68,6 +68,7 @@ const RestroCategories = () => {
       </div>
       <div className="MenuCarausals">
         {categories.map((categorie) => {
+          // console.log(categorie)
           if(categorie?.card?.card["@type"] !== "type.googl=eapis.com/swiggy.presentation.food.v2.NestedItemCategory") {
 
           return (
